@@ -30,7 +30,8 @@
     "lint:js": "eslint \"src/**/*.{vue,ts,tsx}\"",
     "lint:js--fix": "eslint \"src/**/*.{vue,ts,tsx}\" --fix",
     "lint:style": "stylelint \"src/**/*.{vue,css,less,scss,postcss}\"",
-    "lint:style--fix": "stylelint \"src/**/*.{vue,css,less,scss,postcss}\" --fix"
+    "lint:style--fix": "stylelint \"src/**/*.{vue,css,less,scss,postcss}\" --fix",
+    "type:check": "vue-tsc --noEmit --skipLibCheck"
   },
   "browserslist": [
     "last 3 versions",
@@ -69,6 +70,7 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^24.0.0",
     "typescript": "^4.1.0",
-    "vue-loader": "^16.0.0-beta.8"
+    "vue-loader": "^16.0.0-beta.8",
+    "vue-tsc": "^0.30.2"
   }
 }
