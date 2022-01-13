@@ -18,7 +18,7 @@ const config = {
     ['@tarojs/plugin-framework-vue3', {
       mini: {
         compilerOptions: {
-          isCustomElement: (tag) => /van-/.test(tag)
+          isCustomElement: (tag) => /van-|ec-canvas/.test(tag)
         }
       }
     }]

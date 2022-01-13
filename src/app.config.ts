@@ -10,5 +10,6 @@ export default defineAppConfig({
   },
   usingComponents: {
     ...vantConfig.vantWeapp,
+    'ec-canvas': '@/components/Echart/ec-canvas/ec-canvas',
   },
 });
