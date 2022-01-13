@@ -1,4 +1,5 @@
 const path = require('path');
+const vantConfig = require('../vant.config');
 
 const config = {
   projectName: 'taro-app-template',
@@ -11,11 +12,21 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins: [
+    // https://docs.taro.zone/docs/next/vue3#compileroptions
+    ['@tarojs/plugin-framework-vue3', {
+      mini: {
+        compilerOptions: {
+          isCustomElement: (tag) => /van-/.test(tag)
+        }
+      }
+    }]
+  ],
   defineConstants: {
   },
   copy: {
     patterns: [
+      ...vantConfig.vantSourceLib
     ],
     options: {
     }
@@ -29,7 +40,7 @@ const config = {
       pxtransform: {
         enable: true,
         config: {
-
+          selectorBlackList: [/van-/] // https://taro-docs.jd.com/taro/docs/vant/#%E9%85%8D%E7%BD%AE%E5%BF%BD%E7%95%A5-vant-%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B0%BA%E5%AF%B8%E8%BD%AC%E6%8D%A2
         }
       },
       url: {

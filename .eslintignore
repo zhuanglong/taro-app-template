@@ -13,3 +13,4 @@ Dockerfile
 /global.d.ts
 /babel.config.js
 /config
+/src/components/vant-weapp

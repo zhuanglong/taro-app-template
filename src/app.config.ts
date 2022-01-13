@@ -1,3 +1,5 @@
+const vantConfig = require('../vant.config');
+
 export default defineAppConfig({
   pages: ['pages/index/index'],
   window: {
@@ -5,5 +7,8 @@ export default defineAppConfig({
     navigationBarBackgroundColor: '#fff',
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black',
+  },
+  usingComponents: {
+    ...vantConfig.vantWeapp,
   },
 });
