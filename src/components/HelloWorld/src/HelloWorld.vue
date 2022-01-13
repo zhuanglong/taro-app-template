@@ -18,7 +18,7 @@
 <style lang="scss">
   .HelloWorld-container {
     color: #000;
-    font-size: 40px;
+    font-size: 18px;
     font-weight: bold;
   }
 </style>

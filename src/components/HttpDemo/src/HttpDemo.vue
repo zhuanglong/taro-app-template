@@ -24,6 +24,6 @@
   .HttpDemo-container {
     margin-top: 10px;
     color: #333;
-    font-size: 40px;
+    font-size: 18px;
   }
 </style>
