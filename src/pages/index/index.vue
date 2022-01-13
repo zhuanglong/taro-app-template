@@ -1,19 +1,14 @@
 <template>
-  <view class="index">
-    <text>{{ msg }}</text>
-  </view>
+  <HelloWorld content="Hello Taro" />
+  <HttpDemo />
 </template>
 
-<script>
-  import { ref } from 'vue';
-  import './index.scss';
+<script lang="ts" setup>
+  import { onMounted } from 'vue';
+  import HelloWorld from '@/components/HelloWorld';
+  import HttpDemo from '@/components/HttpDemo';
 
-  export default {
-    setup() {
-      const msg = ref('Hello world');
-      return {
-        msg,
-      };
-    },
-  };
+  onMounted(() => {
+    //
+  });
 </script>
