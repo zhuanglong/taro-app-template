@@ -1,3 +1,5 @@
+const path = require('path');
+
 const config = {
   projectName: 'taro-app-template',
   date: '2022-1-13',
@@ -19,6 +21,9 @@ const config = {
     }
   },
   framework: 'vue3',
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src')
+  },
   mini: {
     postcss: {
       pxtransform: {
