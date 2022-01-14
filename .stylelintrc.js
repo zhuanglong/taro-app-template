@@ -15,6 +15,10 @@ module.exports = {
   }],
   rules: {
     // https://github.com/ream88/stylelint-config-idiomatic-order
+    'color-function-notation': null,
+    'alpha-value-notation': null,
+    'property-no-vendor-prefix': null, // 禁止前缀的属性
+    'value-no-vendor-prefix': null, // 禁止前缀的属性
     'selector-class-pattern': null,
     'no-empty-source': null,
     'no-duplicate-selectors': null, // 禁止样式表中的重复选择器
