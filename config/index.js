@@ -1,30 +1,47 @@
+const path = require('path');
+const vantConfig = require('../vant.config');
+
 const config = {
   projectName: 'taro-app-template',
   date: '2022-1-13',
-  designWidth: 750,
+  designWidth: 375, // https://taro-docs.jd.com/taro/docs/size
   deviceRatio: {
     640: 2.34 / 2,
     750: 1,
-    828: 1.81 / 2
+    828: 1.81 / 2,
+    375: 2 / 1
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins: [
+    // https://docs.taro.zone/docs/next/vue3#compileroptions
+    ['@tarojs/plugin-framework-vue3', {
+      mini: {
+        compilerOptions: {
+          isCustomElement: (tag) => /van-|ec-canvas/.test(tag)
+        }
+      }
+    }]
+  ],
   defineConstants: {
   },
   copy: {
     patterns: [
+      ...vantConfig.vantSourceLib
     ],
     options: {
     }
   },
   framework: 'vue3',
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src')
+  },
   mini: {
     postcss: {
       pxtransform: {
         enable: true,
         config: {
-
+          selectorBlackList: [/van-/] // https://taro-docs.jd.com/taro/docs/vant/#%E9%85%8D%E7%BD%AE%E5%BF%BD%E7%95%A5-vant-%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B0%BA%E5%AF%B8%E8%BD%AC%E6%8D%A2
         }
       },
       url: {

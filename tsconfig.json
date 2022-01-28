@@ -9,12 +9,15 @@
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "outDir": "lib",
-    "noUnusedLocals": true,
+    // "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,

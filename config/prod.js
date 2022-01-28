@@ -1,6 +1,8 @@
 module.exports = {
   env: {
-    NODE_ENV: '"production"'
+    NODE_ENV: '"production"',
+    API_BASE_URL: '"https://prod.xxx.com"',
+    API_PREFIX: '""', // 接口前缀
   },
   defineConstants: {
   },
